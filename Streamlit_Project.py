@@ -30,7 +30,7 @@ def main():
     st.divider()
 
     # imports and cleans the dataframe [DA1]
-    crashes_df = pd.read_csv("2017_crashes_modified.csv", index_col="CRASH_NUMB", usecols=import_cols)
+    crashes_df = pd.read_csv("2017_crashes_modified.csv", index_col="CRASH_NUMB")
     crashes_df.dropna(inplace=True)
     # turns the city/town names into first letter caps for each word
     crashes_df["CITY_TOWN_NAME"] = crashes_df["CITY_TOWN_NAME"].str.title()
