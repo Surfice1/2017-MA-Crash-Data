@@ -2,7 +2,7 @@
 Name: Alex Mazelsky
 CS230: Section 5
 Data: 2017 MA Car Crash Data
-URL:
+URL: https://2017-ma-crash-data-dssrrssbh7vagviaxvahgm.streamlit.app/
 
 Description: Uses the 2017 Mass car crash data to demonstrate varius things.
 
@@ -15,11 +15,8 @@ import pandas as pd
 import pydeck as pdk
 import random
 
-# python -m streamlit run "C:\Users\Surfi\PycharmProjects\pythonProject\FinalProject\Streamlit_Project.py"
 # https:\\docs.streamlit.io\library\api-reference
-path = "C:/Users/Surfi/PycharmProjects/pythonProject/FinalProject/"
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
 
 # function creates a list of lists of random numbers, and returns it and the parameters [PY1][PY2][PY3]
 def create_random_lists(list_num, parameters=[10, 1, 100]):
@@ -33,7 +30,7 @@ def main():
     st.divider()
 
     # imports and cleans the dataframe [DA1]
-    crashes_df = pd.read_csv(path + "2017_crashes_modified.csv", index_col="CRASH_NUMB", usecols=import_cols)
+    crashes_df = pd.read_csv("2017_crashes_modified.csv", index_col="CRASH_NUMB", usecols=import_cols)
     crashes_df.dropna(inplace=True)
     # turns the city/town names into first letter caps for each word
     crashes_df["CITY_TOWN_NAME"] = crashes_df["CITY_TOWN_NAME"].str.title()
