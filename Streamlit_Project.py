@@ -19,9 +19,10 @@ import random
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # function creates a list of lists of random numbers, and returns it and the parameters [PY1][PY2][PY3]
-def create_random_lists(list_num, parameters=[10, 1, 100]):
+def create_2_random_lists(parameters=[10, 1, 100]):
     # parameters = length, min, max
-    return [[random.randint(parameters[1], parameters[2]) for x in range(parameters[0])] for x in range(list_num)], parameters
+    output_list = [[random.randint(parameters[1], parameters[2]) for x in range(parameters[0])] for x in range(2)]
+    return output_list[0], output_list[1]
 
 
 def main():
@@ -92,8 +93,8 @@ def main():
     length1 = st.slider("Length 1", 1, 100, 10)
     min1 = st.slider("Minimum 1", 1, 100)
     max1 = st.slider("Maximum 1", 1, 100, 100)
-    lists1 = create_random_lists(2, [length1, min1, max1])
-    plt.plot(lists1[0][0], lists1[0][1])
+    lists1 = create_2_random_lists([length1, min1, max1])
+    plt.plot(lists1[0], lists1[1])
     st.pyplot()
 
     st.divider()
@@ -101,8 +102,8 @@ def main():
     length2 = st.slider("Length 2", 1, 100, 50)
     min2 = st.slider("Min 2", 1, 100)
     max2 = st.slider("Max 2", 1, 100, 100)
-    lists1 = create_random_lists(2, [length2, min2, max2])
-    plt.plot(sorted(lists1[0][0]), lists1[0][1])
+    lists2 = create_2_random_lists([length2, min2, max2])
+    plt.plot(sorted(lists2[0]), sorted(lists2[1]))
     st.pyplot()
 
     pass
