@@ -45,7 +45,7 @@ def main():
     # creates a sorted list with all the unique city/town names [DA2]
     city_town_list = sorted(crashes_df["CITY_TOWN_NAME"].unique())
     # select box for selecting the city/town [ST1]
-    city_town_selected = st.selectbox("Select a city/town to display crashes for:", city_town_list, index=301)
+    city_town_selected = st.selectbox("Select a city/town to display crashes for:", city_town_list, index=300)
 
     # creates a dictionary with the city/town names and the average latitude/longitude for all accidents
     mean_location_dict = crashes_df.groupby(["CITY_TOWN_NAME"]).mean(numeric_only=True).loc[:, ["LAT", "LON"]].to_dict(orient="index")
