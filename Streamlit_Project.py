@@ -40,7 +40,7 @@ def main():
     crashes_df["SPEED_LIMIT"] = [min(value, 70) for value in crashes_df["SPEED_LIMIT"]]
 
     # shows the data we imported
-    st.dataframe(crashes_df)
+    # st.dataframe(crashes_df)
 
     # creates a sorted list with all the unique city/town names [DA2]
     city_town_list = sorted(crashes_df["CITY_TOWN_NAME"].unique())
