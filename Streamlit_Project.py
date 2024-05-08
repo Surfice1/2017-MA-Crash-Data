@@ -4,7 +4,10 @@ CS230: Section 5
 Data: 2017 MA Car Crash Data
 URL: https://2017-ma-crash-data-dssrrssbh7vagviaxvahgm.streamlit.app/
 
-Description: Uses the 2017 Mass car crash data to demonstrate varius things.
+Description: Uses the 2017 Mass car crash data to demonstrate various data processing abilities.
+As data we are using a modified version of the data found here: https://geo-massdot.opendata.arcgis.com/datasets/MassDOT::2017-crashes/about
+The version of the data used here only has the columns we use in the program.
+This was done so I could upload all 145 thousand entries to git.
 
 """
 
