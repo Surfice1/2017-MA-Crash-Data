@@ -1,4 +1,4 @@
-This was my CS230 final project.
+This was my CS230 final project from Spring 2024.
 
 Description: Uses the 2017 Mass car crash data to demonstrate various data processing abilities.
 
