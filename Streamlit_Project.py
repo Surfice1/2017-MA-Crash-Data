@@ -93,7 +93,7 @@ def main():
 
     # last graphs [VIZ3]
     st.divider()
-    st.write("Some extra stuff to meet project requirements")
+    st.write("Some extra stuff for fun")
     st.write("See if you can figure out what the sliders do")
     length1 = st.slider("Length 1", 1, 1000, 10)
     min1 = st.slider("Minimum 1", 1, 1000)
