@@ -19,7 +19,7 @@ import pydeck as pdk
 import random
 
 # https:\\docs.streamlit.io\library\api-reference
-st.set_option('deprecation.showPyplotGlobalUse', False)
+# st.set_option('deprecation.showPyplotGlobalUse', False)
 plt.style.use("dark_background")
 
 # function creates a list of lists of random numbers, and returns it and the parameters [PY1][PY2][PY3]
